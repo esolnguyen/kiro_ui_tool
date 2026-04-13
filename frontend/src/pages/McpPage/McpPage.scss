@@ -1,0 +1,93 @@
+.mcp-page__content {
+  padding: 20px 24px;
+  max-width: 800px;
+}
+
+.mcp-page__error {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  font-size: 13px;
+  color: var(--error);
+  margin-bottom: 16px;
+}
+
+.mcp-page__loading {
+  color: var(--text-tertiary);
+  font-size: 13px;
+}
+
+.mcp-page__server-list {
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.mcp-page__server-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+}
+
+.mcp-page__server-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--accent-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.mcp-page__server-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mcp-page__server-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mcp-page__server-command {
+  font-size: 11px;
+  font-family: monospace;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.mcp-page__server-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.mcp-page__toggle-btn {
+  padding: 4px 6px;
+
+  &--enabled {
+    color: var(--success);
+  }
+
+  &--disabled {
+    color: var(--text-tertiary);
+  }
+}
+
+.mcp-page__delete-btn {
+  padding: 4px 6px;
+  color: var(--error);
+}

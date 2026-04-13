@@ -1,0 +1,16 @@
+.agents-page {
+  &__header-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__content {
+    padding: 20px 24px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+}

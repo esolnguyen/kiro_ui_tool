@@ -1,0 +1,101 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pipelines-page {
+  &__content {
+    padding: 20px 24px;
+    display: flex;
+    gap: 24px;
+    height: calc(100vh - 100px);
+  }
+
+  // ── Sidebar ──
+  &__sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+  }
+
+  // ── Pipeline card ──
+  &__card {
+    padding: 12px 14px;
+    cursor: pointer;
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+
+    &--selected {
+      border-color: var(--accent);
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__card-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__card-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__card-meta {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+  }
+
+  &__card-actions {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__card-btn--delete {
+    padding: 3px 5px;
+    color: var(--error);
+  }
+
+  // ── Right panel ──
+  &__panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 0;
+  }
+
+  // ── Builder ──
+  &__builder {
+    flex: 0;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface-raised);
+    min-height: auto;
+
+    &--active {
+      flex: 1;
+      min-height: 0;
+    }
+  }
+
+}

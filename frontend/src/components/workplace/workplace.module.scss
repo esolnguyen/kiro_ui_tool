@@ -1,0 +1,1139 @@
+// Workplace page styles
+
+.workplace {
+  height: 100%;
+  display: flex;
+  min-height: 0;
+}
+
+// ── Left panel ──────────────────────────────────
+.leftPanel {
+  width: 30%;
+  min-width: 340px;
+  border-right: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+// ── Header ──────────────────────────────────────
+.header {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerTitleText {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.headerActions {
+  display: flex;
+  gap: 2px;
+}
+
+.headerAction {
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+
+.orgProject {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  padding-left: 24px;
+}
+
+// ── Tabs ────────────────────────────────────────
+.tabs {
+  display: flex;
+  padding: 12px 16px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  gap: 0;
+}
+
+.tab {
+  padding: 8px 16px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--text-tertiary);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.15s ease;
+
+  &.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+}
+
+.tabCount {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--surface-hover);
+  color: var(--text-tertiary);
+  min-width: 18px;
+  text-align: center;
+
+  .active & {
+    background: var(--accent-muted);
+    color: var(--accent);
+  }
+}
+
+// ── Filters ─────────────────────────────────────
+.filters {
+  padding: 10px 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.filterIcon {
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+
+  &.active {
+    color: var(--accent);
+  }
+}
+
+.filterSelect {
+  flex: 1;
+  min-width: 80px;
+  font-size: 12px;
+  padding: 5px 8px;
+}
+
+.prFilters {
+  padding: 8px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.prFilterSelect {
+  flex: 1;
+  min-width: 80px;
+  font-size: 11px;
+  padding: 4px 6px;
+}
+
+// ── Create form ─────────────────────────────────
+.createForm {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  background: var(--accent-muted);
+}
+
+.createFormHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createFormTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.createFormClose {
+  padding: 3px 5px;
+}
+
+.createTextarea {
+  width: 100%;
+  min-height: 80px;
+  font-size: 12px;
+  padding: 8px 10px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.createActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.createAgentSelect {
+  flex: 1;
+  font-size: 12px;
+  padding: 5px 8px;
+}
+
+.createSubmit {
+  padding: 6px 14px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+// ── List ────────────────────────────────────────
+.listContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 12px;
+}
+
+.loadingState {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+.errorState {
+  padding: 40px;
+  text-align: center;
+  color: var(--error);
+  font-size: 12px;
+}
+
+// ── List item card ──────────────────────────────
+.itemCard {
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.itemMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.itemId {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono, monospace);
+}
+
+.itemTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.itemSub {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  display: flex;
+  gap: 8px;
+}
+
+.itemRepoName {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-left: auto;
+}
+
+// ── Test plans drill-down ───────────────────────
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--accent);
+  padding: 6px 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.drilldownTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 4px 8px 8px;
+}
+
+.testPriority {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(249, 226, 175, 0.15);
+  color: #f9e2af;
+}
+
+.testAutomation {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(148, 226, 213, 0.12);
+  color: #94e2d5;
+}
+
+.testSuiteType {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--surface-hover);
+  color: var(--text-tertiary);
+  text-transform: capitalize;
+}
+
+// ── Create test plan ────────────────────────────
+.addPlanBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  background: transparent;
+  border: 1px dashed var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.createPlanForm {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.createPlanInput {
+  flex: 1;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.createPlanSubmit {
+  padding: 6px 12px !important;
+  font-size: 11px !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+// ── Drilldown header ────────────────────────────
+.drilldownHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drilldownAddBtn {
+  padding: 4px 6px !important;
+  color: var(--accent);
+}
+
+// ── Generate suite modal extras ─────────────────
+.genSearchRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.genSearchBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  background: var(--input-bg);
+}
+
+.genSearchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+  color: var(--text-primary);
+
+  &::placeholder {
+    color: var(--text-tertiary);
+  }
+}
+
+.genFilterSelect {
+  width: 120px;
+  font-size: 12px;
+  padding: 6px 8px;
+  flex-shrink: 0;
+}
+
+.genPbiList {
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  background: var(--input-bg);
+}
+
+.genPbiItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.1s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: var(--surface-hover);
+  }
+}
+
+.genPbiItemSelected {
+  background: var(--accent-muted) !important;
+  border-left: 3px solid var(--accent);
+}
+
+.genSelectedPreview {
+  padding-top: 4px;
+}
+
+.genSelectedCard {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--accent-muted);
+  border: 1px solid var(--accent);
+}
+
+.genSelectedTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ── Badges ──────────────────────────────────────
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badgeBug {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+.badgePbi {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.badgeActive {
+  background: rgba(166, 227, 161, 0.12);
+  color: #a6e3a1;
+}
+
+.badgeInactive {
+  background: rgba(88, 91, 112, 0.2);
+  color: #585b70;
+}
+
+// ── Pipeline status bar ─────────────────────────
+.pipelineBar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  flex-shrink: 0;
+}
+
+.pipelineBarHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.pipelineBarToggle {
+  padding: 0 !important;
+  color: #585b70;
+}
+
+.pipelineBarName {
+  font-size: 12px;
+  font-weight: 600;
+  color: #cdd6f4;
+  white-space: nowrap;
+}
+
+.pipelineBarMeta {
+  font-size: 11px;
+  color: #585b70;
+  white-space: nowrap;
+}
+
+.pipelineBarProgress {
+  display: flex;
+  gap: 2px;
+  flex: 1;
+  min-width: 60px;
+  margin-left: 4px;
+}
+
+.pipelineBarSegment {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+
+  &--completed {
+    background: #a6e3a1;
+  }
+
+  &--running {
+    background: var(--accent, #89b4fa);
+    animation: pipelinePulse 1.5s ease-in-out infinite;
+  }
+
+  &--failed {
+    background: #f38ba8;
+  }
+
+  &--waiting_approval,
+  &--waiting_input {
+    background: #f9e2af;
+  }
+}
+
+@keyframes pipelinePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pipelineBarDismiss {
+  padding: 2px !important;
+  color: #585b70;
+
+  &:hover {
+    color: #cdd6f4;
+  }
+}
+
+.pipelineBarStages {
+  padding: 0 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pipelineBarStage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pipelineBarStageRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.pipelineBarStageNum {
+  font-size: 10px;
+  font-weight: 700;
+  color: #585b70;
+  min-width: 14px;
+}
+
+.pipelineBarStageId {
+  font-size: 11px;
+  color: #cdd6f4;
+  font-weight: 500;
+}
+
+.pipelineBarStageStatus {
+  font-size: 10px;
+  color: #585b70;
+  margin-left: auto;
+}
+
+.pipelineBarStageActions {
+  display: flex;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.pipelineBarSmallBtn {
+  padding: 2px 8px !important;
+  font-size: 10px !important;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pipelineBarInputRow {
+  display: flex;
+  gap: 6px;
+  padding-left: 20px;
+}
+
+.pipelineBarInput {
+  flex: 1;
+  font-size: 11px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: #cdd6f4;
+
+  &::placeholder {
+    color: #585b70;
+  }
+}
+
+.pipelineBarError {
+  font-size: 10px;
+  color: #f38ba8;
+  padding-left: 20px;
+}
+
+.pipelineIconCompleted {
+  color: #a6e3a1;
+}
+
+.pipelineIconFailed {
+  color: #f38ba8;
+}
+
+.pipelineIconWaiting {
+  color: #f9e2af;
+}
+
+.pipelineStageDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid #585b70;
+  flex-shrink: 0;
+}
+
+// ── Terminal panel ──────────────────────────────
+.rightPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #0c0c10;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+.termHeader {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.termTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #cdd6f4;
+}
+
+.termStatus {
+  font-size: 10px;
+  color: #a6e3a1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.termDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a6e3a1;
+  display: inline-block;
+}
+
+.termActions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.termActionBtn {
+  padding: 3px 8px !important;
+  font-size: 10px !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 6px;
+  color: #585b70;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: #cdd6f4;
+  }
+
+  span {
+    color: inherit;
+  }
+}
+
+.termShortcut {
+  font-size: 9px;
+  font-family: var(--font-mono, monospace);
+  color: #585b70;
+  padding: 1px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  margin-left: 2px;
+}
+
+.termContainer {
+  flex: 1;
+  min-height: 0;
+  padding: 8px;
+  overflow: hidden;
+}
+
+// ── Whip animation ──────────────────────────────
+.whipOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;
+  animation: whipFade 3s ease-out forwards;
+}
+
+.whipGif {
+  width: 450px;
+  border-radius: 12px;
+  animation: whipSwing 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  filter: drop-shadow(0 0 24px rgba(0, 0, 0, 0.6));
+}
+
+@keyframes whipSwing {
+  0% {
+    transform: scale(0.3) rotate(-10deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.05) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes whipFade {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// ── Modal ───────────────────────────────────────
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: var(--surface-base);
+  border-radius: 12px;
+  width: 640px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modalHeader {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.modalMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.modalId {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono, monospace);
+}
+
+.modalTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.modalClose {
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.modalBody {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalFields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.modalFieldLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.modalSectionLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.modalContent {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 12px 14px;
+  background: var(--input-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  word-break: break-word;
+}
+
+.modalContentPre {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 12px 14px;
+  background: var(--input-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.reviewerChip {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--input-bg);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.reviewerList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.modalFooter {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.modalFooterActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalLink {
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.modalAction {
+  padding: 7px 16px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+// ── Run mode toggle ─────────────────────────────
+.runModeRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.runModeToggle {
+  display: flex;
+  background: var(--input-bg);
+  border-radius: 8px;
+  padding: 2px;
+  border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.runModeBtn {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  color: var(--text-tertiary);
+  transition: all 0.15s ease;
+
+  &.active {
+    background: var(--accent);
+    color: #fff;
+  }
+}
+
+.runModeSelect {
+  flex: 1;
+  font-size: 12px;
+  padding: 5px 8px;
+}
+
+// ── Agent selector (simple) ─────────────────────
+.agentRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.agentSelect {
+  flex: 1;
+  font-size: 12px;
+  padding: 5px 8px;
+}
+
+// ── SearchableSelect ────────────────────────────
+.searchSelect {
+  position: relative;
+  flex: 1;
+  min-width: 80px;
+}
+
+.searchSelectBtn {
+  width: 100%;
+  font-size: 11px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.searchSelectBtnText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.searchSelectPlaceholder {
+  color: var(--text-tertiary);
+}
+
+.searchSelectValue {
+  color: var(--text-primary);
+}
+
+.searchSelectDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin-top: 4px;
+  background: var(--surface-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-height: 220px;
+  overflow: hidden;
+}
+
+.searchSelectSearch {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.searchSelectInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 11px;
+  color: var(--text-primary);
+  padding: 0;
+}
+
+.searchSelectOptions {
+  overflow-y: auto;
+  max-height: 176px;
+}
+
+.searchSelectOption {
+  padding: 6px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 400;
+
+  &.selected {
+    color: var(--accent);
+    font-weight: 600;
+    background: var(--accent-muted);
+  }
+}
+
+.searchSelectEmpty {
+  padding: 10px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+// ── Spinner animation ───────────────────────────
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ── Not connected ───────────────────────────────
+.notConnected {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

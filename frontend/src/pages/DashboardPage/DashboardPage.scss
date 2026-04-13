@@ -1,0 +1,292 @@
+.dashboard-page__content {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Stat cards ── */
+.dashboard-page__stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.dashboard-page__stat-link {
+  text-decoration: none;
+}
+
+.dashboard-page__stat-card {
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-page__stat-card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at top left,
+    var(--accent-muted) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.dashboard-page__stat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dashboard-page__stat-icon {
+  color: var(--accent);
+}
+
+.dashboard-page__stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* ── Model distribution ── */
+.dashboard-page__model-distribution {
+  padding: 16px 20px;
+}
+
+.dashboard-page__model-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dashboard-page__model-count {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-family: monospace;
+}
+
+.dashboard-page__proportion-bar {
+  margin-bottom: 12px;
+}
+
+.dashboard-page__model-legend {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-page__model-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dashboard-page__model-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dashboard-page__model-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.dashboard-page__model-value {
+  font-size: 11px;
+  font-family: monospace;
+  color: var(--text-tertiary);
+}
+
+/* ── Bento grid ── */
+.dashboard-page__bento {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+/* ── Panels (agents, commands) ── */
+.dashboard-page__panel {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.dashboard-page__panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--surface-raised);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dashboard-page__panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-page__panel-title-icon {
+  color: var(--accent);
+}
+
+.dashboard-page__view-all-link {
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── Empty state ── */
+.dashboard-page__empty-state {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 13px;
+}
+
+.dashboard-page__empty-state--small {
+  padding: 20px 16px;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 12px;
+}
+
+.dashboard-page__empty-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── Agent list ── */
+.dashboard-page__agent-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dashboard-page__agent-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dashboard-page__agent-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-page__agent-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-page__agent-description {
+  font-size: 11px;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Right column ── */
+.dashboard-page__right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Command list ── */
+.dashboard-page__command-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dashboard-page__command-prefix {
+  font-size: 11px;
+  color: var(--accent);
+  font-family: monospace;
+  flex-shrink: 0;
+}
+
+.dashboard-page__command-name {
+  font-size: 12px;
+  color: var(--text-primary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Quick actions ── */
+.dashboard-page__quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard-page__quick-action-link {
+  text-decoration: none;
+}
+
+.dashboard-page__quick-action-card {
+  padding: 12px 16px;
+}
+
+.dashboard-page__quick-action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-page__quick-action-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent-muted);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.dashboard-page__quick-action-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-page__quick-action-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dashboard-page__quick-action-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.dashboard-page__quick-action-arrow {
+  color: var(--text-tertiary);
+}
